@@ -1,0 +1,274 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+.head1
+{
+    background-image: linear-gradient(to right,violet,pink);
+    height: 55px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    overflow: visible;
+}
+div.title1
+{
+    animation-name: titlecard;
+    animation-duration: 2s;
+    position: relative;
+    max-width: 100%;
+    display: block;
+    font-size: 45px;
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: 900;
+}
+@keyframes titlecard
+{
+    from {
+        position: absolute;
+        left: 5%;
+    }
+    to{
+        position: absolute;
+        left: 38%;
+    }
+}
+div.menuicon
+{
+    position: absolute;
+    left: 10px;
+    transform: rotate(180deg);
+    transition: transform 2s;
+    background-color: black;
+    height: 5px;
+    width: 35px;
+}
+ul li a
+{
+    text-decoration: none;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: black;
+}
+ul
+{
+    padding: 0;
+}
+ul li a:hover
+{
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-image: linear-gradient(to right,violet,white);
+}
+ul li
+{
+    position: relative;
+    left: 25%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    list-style-type: none;
+    max-width:100%;
+}
+ul li:hover
+{
+    transform:scale(1.2,1);
+    transition: transform 2s;
+}
+.icon
+{
+    position: absolute;
+    top: 25px;
+    width: 35px;
+    box-sizing: border-box;
+    height: 25px;
+}
+div.icon:hover
+{
+    transform: scale(1.1,1.1);
+    transition: transform 1s;
+    cursor: pointer;
+}
+.menucont
+{
+    display: none;
+    margin-top: 0;
+    background-image:linear-gradient(to right,pink,white);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 5px;
+}
+@keyframes menucontent
+{
+    from
+    {
+        width: 150px;
+    }
+    to
+    {
+        position: absolute;
+        width: 200px;
+    }
+}
+div.menu:hover .menucont
+{
+    animation-name:menucontent;
+    animation-duration: 2s;
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: 10px;
+    width: 200px;
+}
+
+.imgicon
+{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+}
+.imgicon img.imgphoto
+{   
+    box-shadow: 1px 1px 15px 2px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+@keyframes imgmsd
+{
+    from
+    {
+        height: 200px;
+    }
+    to
+    {
+        height: 400px;
+    }
+}
+.imgzoom
+{
+    animation-name: imgmsd;
+    animation-duration: 2s;
+    display: none;
+    position: absolute;
+    width: 400px;
+    height:400px;
+    top: 100px;
+    right: 100px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 15px 5px;
+}
+.imgicon:hover .imgzoom
+{
+    position: absolute;
+    display: block;
+}
+.about
+{
+    position: static;
+    top: 70px;
+    display: block;
+    font-weight: bolder;
+    font-variant: small-caps;
+    font-size: 40px;
+    margin-left: 47%;
+    padding-top: 20px;
+}
+@media screen and (max-width:700px)
+{
+    ul li a
+    {
+        text-decoration: none;
+        padding: 3px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: 10px;
+        font-weight: 800;
+        color: black;
+    }
+    ul li
+    {
+        position: relative;
+        left: 20%;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        padding-left: 0;
+        list-style-type: none;
+        max-width:100%;
+    }
+    div.title1
+    {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    @keyframes titlecard
+    {
+        from {
+            position: absolute;
+            left: 0;
+        }
+        to{
+            position: absolute;
+            left: 25%;
+        }
+    }
+    .imgicon
+    {
+        position: absolute;
+        top: 7px;
+    }
+    @keyframes imgmsd
+    {
+        from
+        {
+            height: 100px;
+        }
+        to
+        {
+            height: 200px;
+        }
+    }
+    .imgzoom
+    {
+        position: absolute;
+        width: 200px;
+        height: 200px;  
+        right: 50px; 
+    }
+    .about
+    {
+        font-size: 30px;
+        margin-left: 35%;
+    }
+    .icon
+    {
+        top: 20px;
+    }
+    div.menu:hover .menucont
+    {
+        width: 150px;
+    }
+    @keyframes menucontent
+    {
+        from
+        {
+            width: 100px;
+        }
+        to
+        {
+            position: absolute;
+            width: 150px;
+        }
+    }
+}
