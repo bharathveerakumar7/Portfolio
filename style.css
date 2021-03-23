@@ -209,8 +209,8 @@ div.menu:hover .menucont
     }
     div.title1
     {
-        font-size: 30px;
-        margin-top: 10px;
+        font-size: 50px;
+        margin-top: 20px;
     }
     @keyframes titlecard
     {
